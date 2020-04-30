@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build DockerImage --file DockerImage/Dockerfile --tag FastSimulation:$(date +%s)
+      run: docker build DockerImage --file DockerImage/Dockerfile --tag fastsimulation:$(date +%s)
