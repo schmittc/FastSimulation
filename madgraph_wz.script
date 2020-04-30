@@ -1,0 +1,12 @@
+import model sm
+define p = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+ ta+
+define l- = e- mu- ta-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+define l = l+ l-
+define ln=vl vl~
+generate p p > W+ l l, W+ > l+ vl @1
+add process p p > W- l l, W- > l- vl~ @2
+output WZ_process
+launch
