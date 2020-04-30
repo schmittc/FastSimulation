@@ -12,6 +12,9 @@ Next:numberShowInfo = 1            ! print event information n times
 Next:numberShowProcess = 1         ! print process record n times
 Next:numberShowEvent = 1           ! print event record n times
 
+! Adjust tau decays
+15:onMode  = off
+15:onIfAny = 11 13
 
 ! 3) Set the input LHE file
 
