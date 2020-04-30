@@ -9,6 +9,7 @@ docker run -it --rm -v $(pwd):/scratch fastsim:latest
 # inside docker
 
 cd /scratch
+
 mg5_aMC -f madgraph_wz.script
 
 ln -s /opt/delphes/MinBias.pileup .
