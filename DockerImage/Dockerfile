@@ -31,7 +31,7 @@ RUN wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | t
  && wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/NNPDF23_lo_as_0130_qed.tar.gz -O- | tar xz -C /opt/lhapdf/share/LHAPDF
 
 # install Pythia8
-RUN curl -sL http://home.thep.lu.se/~torbjorn/pythia8/pythia8244.tgz | tar -C /opt -zxf - \
+RUN curl -sL https://pythia.org/download/pythia82/pythia8244.tgz | tar -C /opt -zxf - \
   && cd /opt/pythia8244 \
   && ./configure --prefix=/opt/pythia8 --with-lhapdf6=/opt/lhapdf --with-gzip \
   && make install \
@@ -54,7 +54,7 @@ ENV LD_LIBRARY_PATH=/opt/delphes/lib:$LD_LIBRARY_PATH
 
 # install MadGraph
 RUN cd /opt \
-  && wget https://launchpad.net/mg5amcnlo/2.0/2.7.x/+download/MG5_aMC_v2.7.2.tar.gz \
+  && wget https://madgraph.mi.infn.it/Downloads/MG5_aMC_v2.7.2.tar.gz \
   && tar xfz MG5_aMC_v2.7.2.tar.gz && rm MG5_aMC_v2.7.2.tar.gz \
   && rm -f MG5_aMC_v2_7_2/input/.autoupdate
   
